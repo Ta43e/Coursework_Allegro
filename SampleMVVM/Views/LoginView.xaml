@@ -1,0 +1,204 @@
+﻿<Window x:Class="SampleMVVM.Views.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:ei="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SampleMVVM.Views"
+        xmlns:custom="clr-namespace:CustomControls.Controls;assembly=CustomControls"
+        xmlns:viewModel="clr-namespace:SampleMVVM.ViewModels" 
+        mc:Ignorable="d"
+        Title="LoginView" Height="470" Width="550"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        x:Name="logView"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        Icon="../resurse/loog.png"
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown">
+
+
+    <Window.DataContext>
+        <viewModel:LoginTestViewModel/>
+    </Window.DataContext>
+
+    <Border  CornerRadius="12">
+        
+        <Border.Background>
+            <ImageBrush ImageSource="../resurse/fon.jpg"
+                        Stretch="None"/>
+        </Border.Background>
+
+        <Border CornerRadius="10"                    
+            BorderThickness="2"
+            Opacity="0.95">
+
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#462AD8" Offset="0"/>
+                    <GradientStop Color="#DA34AE" Offset="0.75"/>
+                    <GradientStop Color="#8A16C1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#060531" Offset="0"/>
+                    <GradientStop Color="#1B1448" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="btnMinimize"                           
+                            BorderThickness="0"
+                            Content="-"
+                            Foreground="White"
+                            FontSize="16"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="1"
+                            Click="btnMinimize_Click">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#28AEED"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#278BEF"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="18" Height="18"
+                                        CornerRadius="9"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+
+                    <Button x:Name="btnClose"                          
+                            BorderThickness="0"
+                            Content="✖"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="2"
+                            Click="btnClose_Click">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#DA34AE"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#C62DAE"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="18" Height="18"
+                                        CornerRadius="9"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+
+                <StackPanel VerticalAlignment="Center" Grid.Row="1">
+
+                    <Image Source="../resurse/logo_transparent.png" Width="200" Height="200"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <StackPanel>
+                            <custom:InputBox NameBox="{DynamicResource log_username}"  Margin="5 10" Width="200"
+                                     ErrorMessage="{Binding ErrorUserName, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                     InputText="{Binding UserName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+
+                            <custom:BindablePasswordBox NameBox="{DynamicResource log_password}" Margin="5 10" Width="200"
+                                                MessageError="{Binding ErrorPassword, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                                Password="{Binding Password, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+
+
+                        </StackPanel>
+
+                        <StackPanel Style="{DynamicResource Visible/HidenReg}">
+
+                            <custom:InputBox NameBox="{DynamicResource log_mail}" Margin="5 10" Width="200"
+                                     ErrorMessage="{Binding ErrorEmail, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"
+                                     InputText="{Binding Email, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+
+
+                        </StackPanel>
+                    </StackPanel>
+
+
+                    <Button Style="{DynamicResource Visible/HidenLog}" 
+                    CommandParameter="{Binding ElementName=logView}"
+                    Foreground="Purple"
+                    FontSize="16"
+                    Width="200" Margin="5 10"/>
+
+                    <CheckBox Name="LoginCheckBox"
+                      FontWeight="Bold"
+                      Foreground="LightGray"
+                      FontSize="13">
+                        <CheckBox.Style>
+                            <Style TargetType="{x:Type CheckBox}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type CheckBox}">
+                                            <Border BorderThickness="0 0 0 1" Width="90"
+                                            BorderBrush="LightGray">
+                                                <ContentPresenter HorizontalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsChecked" Value="False">
+                                        <Setter Property="Content" Value="{DynamicResource log_register}"/>
+                                    </Trigger>
+                                    <Trigger Property="IsChecked" Value="True">
+                                        <Setter Property="Content" Value="{DynamicResource log_login}"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </CheckBox.Style>
+                    </CheckBox>
+                </StackPanel>
+            </Grid>
+        </Border>
+       
+    </Border>
+
+</Window>

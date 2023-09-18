@@ -1,0 +1,43 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:System;assembly=mscorlib">
+
+    <local:String x:Key="Search">Search</local:String>
+    <local:String x:Key="Delete">Delete</local:String>
+    <local:String x:Key="Edit">Edit</local:String>
+    <local:String x:Key="AddPicture">Add  picture</local:String>
+    <local:String x:Key="Cancellation">Cancellation</local:String>
+    <local:String x:Key="DeletePlaylist">Delete Playlist</local:String>
+    <local:String x:Key="Save">Save</local:String>
+    <local:String x:Key="AddPlaylist">Add playlist</local:String>
+    <local:String x:Key="AddSongs">Add Songs</local:String>
+    <local:String x:Key="AddInPlaylist">Add to playlist</local:String>
+    <local:String x:Key="Add">Add</local:String>
+    <local:String x:Key="EditPicture">Change Image</local:String>
+    <local:String x:Key="Name">Name</local:String>
+    <local:String x:Key="Artist">Executor</local:String>
+    <local:String x:Key="Description">Description</local:String>
+    <local:String x:Key="PlayListADD">In PlayList</local:String>
+    <local:String x:Key="PlayListADDMusic">Add</local:String>
+    <local:String x:Key="log_password">Password</local:String>
+    <local:String x:Key="log_mail">E-mail</local:String>
+    <local:String x:Key="log_username">Name</local:String>
+    <local:String x:Key="log_register">Register</local:String>
+    <local:String x:Key="log_login">Login</local:String>
+    <local:String x:Key="name_songs">Name of the song</local:String>
+    <local:String x:Key="author_song">Author</local:String>
+    <local:String x:Key="title_song">Description</local:String>
+    <local:String x:Key="gut">Ok</local:String>
+
+    <local:String x:Key="ErrorName">Enter song title</local:String>
+    <local:String x:Key="ErrorArtist">Enter songwriter</local:String>
+    <local:String x:Key="ErrorTitle">Enter a description</local:String>
+    <local:String x:Key="ErrorImage">Add a picture</local:String>
+    <local:String x:Key="ErrorSong">Add a Song</local:String>
+
+    <local:String x:Key="ErrorAddSongs">This song has already been added.</local:String>
+    <local:String x:Key="name_playlist">Playlist name</local:String>
+
+
+
+</ResourceDictionary>

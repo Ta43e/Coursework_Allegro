@@ -1,0 +1,40 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:System;assembly=mscorlib">
+
+    <local:String x:Key="Search">Поиск</local:String>
+    <local:String x:Key="Delete">Удалить</local:String>
+    <local:String x:Key="Edit">Редактировать</local:String>
+    <local:String x:Key="AddPicture">Добавить картинку</local:String>
+    <local:String x:Key="AddSongs">Добавить песню</local:String>
+    <local:String x:Key="Cancellation">Отмена</local:String>
+    <local:String x:Key="DeletePlaylist">Удалить плейлист</local:String>
+    <local:String x:Key="Save">Сохранить</local:String>
+    <local:String x:Key="AddPlaylist">Добавить плейлист</local:String>
+    <local:String x:Key="Add">Добавить</local:String>
+    <local:String x:Key="AddInPlaylist">Добавить в плейлист</local:String>
+    <local:String x:Key="EditPicture">Изменить картинку</local:String>
+    <local:String x:Key="Name">Назание</local:String>
+    <local:String x:Key="Artist">Исполнитель</local:String>
+    <local:String x:Key="Description">Описание</local:String>
+    <local:String x:Key="PlayListADD">В плейлист</local:String>
+    <local:String x:Key="PlayListADDMusic">Добавить</local:String>
+    <local:String x:Key="log_password">Пароль</local:String>
+    <local:String x:Key="log_mail">Почта</local:String>
+    <local:String x:Key="log_username">Имя</local:String>
+    <local:String x:Key="log_register">Регистрация</local:String>
+    <local:String x:Key="log_login">Вход</local:String>
+    <local:String x:Key="name_songs">Название песни</local:String>
+    <local:String x:Key="author_song">Автор</local:String>
+    <local:String x:Key="title_song">Описание</local:String>
+    <local:String x:Key="gut">Успех</local:String>
+    <local:String x:Key="ErrorName">Введите название песни</local:String>
+    <local:String x:Key="ErrorArtist">Введите автора песни</local:String>
+    <local:String x:Key="ErrorTitle">Введите описание</local:String>
+    <local:String x:Key="ErrorImage">Добавьте картинку</local:String>
+    <local:String x:Key="ErrorSong">Добавьте песню</local:String>
+    <local:String x:Key="ErrorAddSongs">Данная песня уже добавленна</local:String>
+    
+    <local:String x:Key="name_playlist">Имя плейлиста</local:String>
+
+</ResourceDictionary>

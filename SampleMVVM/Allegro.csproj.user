@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\AddListMusicView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AddMusicInPlayListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\FormToAddView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ListMusicPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\LoginView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MainView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\NewPlayListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PlayListEditionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SelectPlaylistToAddView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SongEditionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UserListMusicView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="ResiurceDictionary\dark.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResiurceDictionary\lang-ENG.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResiurceDictionary\lang-RU.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResiurceDictionary\light.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddListMusicView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddMusicInPlayListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\FormToAddView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ListMusicPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MainView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\NewPlayListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PlayListEditionView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SelectPlaylistToAddView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SongEditionView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserListMusicView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,93 @@
+﻿<Page x:Class="SampleMVVM.Views.AddMusicInPlayListView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SampleMVVM.Views"
+      xmlns:i="http://schemas.microsoft.com/xaml/behaviors" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddMusicInPlayListView">
+    <Border  CornerRadius="12">
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="135"/>
+                <RowDefinition Height="80*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="0,0,0,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="70*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Source="{Binding ImagePath}" />
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="{Binding PlayList_Name}" Style="{DynamicResource TextH1}" Padding="5"/>
+                    <TextBlock Grid.Row="1" Text="{Binding Author}" Style="{DynamicResource TitlePlayList}" Padding="5"/>
+                    <Button Grid.Row="2" Command="{Binding IOpenNewWindows}" Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Left">
+                        <materialDesign:PackIcon Kind="Edit" Style="{DynamicResource AddCircleIconStyle}"/>
+                    </Button>
+                </Grid>
+
+            </Grid>
+
+            <ListBox Grid.Row="1" HorizontalContentAlignment="Stretch" Visibility="{Binding CheckUser, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.Column="0" ItemsSource="{Binding ListMusicViewMod}" Style="{DynamicResource ListViewStyle}" SelectedItem="{Binding SelectedMusic, Mode=TwoWay}" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel HorizontalAlignment="Stretch">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding Path=ImagePath}" Height="70" Width="70" Grid.Column="0"/>
+                                <Grid Grid.Column="1"
+                                      HorizontalAlignment="Stretch">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="40*"/>
+                                            <RowDefinition Height="40*"/>
+                                            <RowDefinition Height="40*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="160"/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="100"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Row="0" Grid.Column="0"  Text="{Binding Path=Name}" Style="{DynamicResource TextH1}" />
+                                        <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding Path=Artist}" Style="{DynamicResource TitlePlayList}"/>
+                                        <TextBlock Grid.Row="2" Grid.Column="0" Text="{Binding Path=Duration}"  Style="{DynamicResource ColVo}" />
+
+                                        <Button  Grid.Column="2" Grid.Row="0"  Style="{DynamicResource But}" Command="{Binding DataContext.Description, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}" 
+                                                     CommandParameter="{Binding Id}" IsEnabled="{Binding DataContext.CanDeleteItem  , RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}">
+                                            <materialDesign:PackIcon Kind="AboutCircle" Style="{DynamicResource AddCircleIconStyle}"/>
+                                        </Button>
+                                        <Button  Grid.Column="2" Grid.Row="3"  Style="{DynamicResource But}" Command="{Binding DataContext.Delete, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}" 
+                                                    CommandParameter="{Binding Id}" 
+                                                    IsEnabled="{Binding DataContext.CanDeleteItem, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}">
+                                            <materialDesign:PackIcon Kind="Delete" Style="{DynamicResource AddCircleIconStyleDelete}"/>
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="PreviewMouseDoubleClick">
+                        <i:InvokeCommandAction Command="{Binding DoubleClickCommand}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </ListBox>
+        </Grid>
+    </Border>
+
+</Page>

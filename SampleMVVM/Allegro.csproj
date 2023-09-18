@@ -1,0 +1,171 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;8602</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;8602</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resurse\AddMusic.png" />
+    <None Remove="resurse\AddMusicDark.png" />
+    <None Remove="resurse\back-image.jpg" />
+    <None Remove="resurse\cursor.cur" />
+    <None Remove="resurse\dark.png" />
+    <None Remove="resurse\fon.jpg" />
+    <None Remove="resurse\Home.png" />
+    <None Remove="resurse\HomeDark.png" />
+    <None Remove="resurse\instagram_profile_image.png" />
+    <None Remove="resurse\key-icon.png" />
+    <None Remove="resurse\light.png" />
+    <None Remove="resurse\like.png" />
+    <None Remove="resurse\likeDark.png" />
+    <None Remove="resurse\logo.png" />
+    <None Remove="resurse\logo_transparent.png" />
+    <None Remove="resurse\Loog.png" />
+    <None Remove="resurse\NextB.png" />
+    <None Remove="resurse\Pause.png" />
+    <None Remove="resurse\PlayB.png" />
+    <None Remove="resurse\PlayList.png" />
+    <None Remove="resurse\PlayListDark.png" />
+    <None Remove="resurse\PlayMusic.png" />
+    <None Remove="resurse\PlayMusicDark.png" />
+    <None Remove="resurse\PrevB.png" />
+    <None Remove="resurse\Profiles.png" />
+    <None Remove="resurse\ProfilesDark.png" />
+    <None Remove="resurse\Random.png" />
+    <None Remove="resurse\replay.png" />
+    <None Remove="resurse\ru.png" />
+    <None Remove="resurse\us.png" />
+    <None Remove="resurse\user-icon.png" />
+    <None Remove="resurse\VolumeB.png" />
+
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>6bf52a50-394a-11d3-b153-00c04f79faa6</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resurse\back-image.jpg" />
+    <Resource Include="resurse\cursor.cur" />
+    <Resource Include="resurse\fon.jpg" />
+    <Resource Include="resurse\instagram_profile_image.png" />
+    <Resource Include="resurse\key-icon.png" />
+    <Resource Include="resurse\like.png" />
+    <Resource Include="resurse\likeDark.png" />
+    <Resource Include="resurse\logo.png" />
+    <Resource Include="resurse\logo_transparent.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\Loog.png" />
+    <Resource Include="resurse\PlayB.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\Random.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommonServiceLocator" Version="2.0.7">
+      <TreatAsUsed>true</TreatAsUsed>
+    </PackageReference>
+    <PackageReference Include="MaterialDesignColors" Version="2.1.4" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <TreatAsUsed>true</TreatAsUsed>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+    <PackageReference Include="NAudio" Version="2.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CustomControls\CustomControls.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resurse\AddMusic.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\AddMusicDark.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\dark.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\Home.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\HomeDark.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\light.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\NextB.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\Pause.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\PlayList.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\PlayListDark.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\PlayMusic.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\PlayMusicDark.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\PrevB.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\Profiles.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\ProfilesDark.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\replay.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\ru.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\us.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resurse\user-icon.png" />
+    <Resource Include="resurse\VolumeB.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

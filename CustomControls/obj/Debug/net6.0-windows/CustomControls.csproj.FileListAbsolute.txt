@@ -1,0 +1,17 @@
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\bin\Debug\net6.0-windows\CustomControls.deps.json
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\bin\Debug\net6.0-windows\CustomControls.dll
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\bin\Debug\net6.0-windows\CustomControls.pdb
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\obj\Debug\net6.0-windows\CustomControls.csproj.AssemblyReference.cache
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\obj\Debug\net6.0-windows\CustomControls_MarkupCompile.cache
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\obj\Debug\net6.0-windows\CustomControls_MarkupCompile.lref
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\obj\Debug\net6.0-windows\Themes\Generic.baml
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\obj\Debug\net6.0-windows\CustomControls.g.resources
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\obj\Debug\net6.0-windows\CustomControls.GeneratedMSBuildEditorConfig.editorconfig
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\obj\Debug\net6.0-windows\CustomControls.AssemblyInfoInputs.cache
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\obj\Debug\net6.0-windows\CustomControls.AssemblyInfo.cs
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\obj\Debug\net6.0-windows\CustomControls.csproj.CoreCompileInputs.cache
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\obj\Debug\net6.0-windows\CustomControls.dll
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\obj\Debug\net6.0-windows\refint\CustomControls.dll
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\obj\Debug\net6.0-windows\CustomControls.pdb
+D:\УНИК\Семестр 4\SampleMVVM\CustomControls\obj\Debug\net6.0-windows\ref\CustomControls.dll
